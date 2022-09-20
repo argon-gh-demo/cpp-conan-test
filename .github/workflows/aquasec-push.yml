@@ -12,7 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      run: cmake --build .
+      run: |
+        cmake --version
+        cmake --build .
+      
     - name: Run Trivy vulnerability scanner in IaC mode
       uses: aquasecurity/trivy-action@master
       with:
