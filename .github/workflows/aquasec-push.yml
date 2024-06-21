@@ -46,7 +46,7 @@ jobs:
           --access-token "${{ secrets.GITHUB_TOKEN }}" \
           --aqua-key "${{ secrets.AQUA_KEY }}" \
           --aqua-secret "${{ secrets.AQUA_SECRET }}" \
-          --artifact-path . 
+          --artifact-path "./conan.lock"
       env:
         AQUA_KEY: ${{ secrets.AQUA_KEY }}
         AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
